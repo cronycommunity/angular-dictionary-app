@@ -5,7 +5,7 @@
         <form [formGroup]="filterForm" (ngSubmit)="onSubmit()">
             <div>
                 <label for="filter"> Filter </label>
-                <input id="filter" type="text" formControlName="filter" />
+                <input id="filter" (input)="onSubmit()" type="text" formControlName="filter" />
             </div>
 
             <button class="button" type="submit">Search</button>
